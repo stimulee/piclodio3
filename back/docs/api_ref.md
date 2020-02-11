@@ -202,7 +202,7 @@ Create a new alarm.
 
 #### Example call
 ```
-curl -H "Content-Type: application/json" -X POST -d '{"name": "work", "monday": true, "tuesday": true, "wednesday": true, "thursday": true, "friday": true, "saturday": true, "sunday": true, "hour": 7, "minute": 30, "is_active": true, "webradio": 5}' http://127.0.0.1:8000/alarm/
+curl -H "Content-Type: application/json" -X POST -d '{"name": "work", "monday": true, "tuesday": true, "wednesday": true, "thursday": true, "friday": true, "saturday": true, "sunday": true, "hour": 7, "minute": 30, "is_active": true, "webradio": 5}' http://127.0.0.1:8000/alarms/
 ```
 
 #### Example answer
@@ -359,7 +359,7 @@ Set the volume on the remote device.
 
 #### Example call
 ```
-curl -X POST http://127.0.0.1:8000/volume/
+curl -H "Content-Type: application/json" -d '{"volume": 50}' -X POST http://127.0.0.1:8000/volume/
 ```
 
 #### Example answer
